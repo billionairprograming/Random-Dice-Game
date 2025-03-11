@@ -13,9 +13,15 @@ function rollDice() {
   console.log(`You rolled a ${roll}`);
 }
 
-rollDice();
-rollDice();
-rollDice();
-rollDice();
-//function getRandomNumber(min, max){
-//   return Math.floor(Math.random() * (min - max) + min)}
+function displayScores() {
+  console.log(`Dice rolled scrore tracker:`);
+  for (const roll in scoreTracker) {
+    console.log(`${roll}: ${scoreTracker[roll]} times`);
+  }
+}
+
+for (let i = 0; i < 50; i++) {
+  rollDice();
+}
+
+displayScores();
